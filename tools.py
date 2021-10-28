@@ -7,6 +7,10 @@ def isSorted(data) -> bool:
     return all(a <= b for a, b in zip(data, data[1:]))
 
 def remove(array, element):
+    result = []
     for idx, i in enumerate(array):
         if i == element:
-            None
+            for j in range(len(array)):
+                if j != idx:
+                    result.append(array[j])
+            return result

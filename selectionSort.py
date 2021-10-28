@@ -1,7 +1,9 @@
+from tools import remove
+
 def SelectionSort(array):
-    for i in range(len(array)):
-        l = array[i]
-        r = min(array[i:])
-        array[i] = r
-        
+    sorted = []
+    for _ in range(len(array)):
+        r = min(array)
+        sorted.append(r)
+        array = remove(array, r)
     return sorted

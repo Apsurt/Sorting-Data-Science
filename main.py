@@ -4,12 +4,12 @@ from selectionSort import SelectionSort
 from bubbleSort import BubbleSort
 
 def main():
-    for i in range(1000000):
+    for i in range(1000):
         arr = RandomArray(5, (0,100))
-        sorted = BubbleSort(arr)
+        sorted = SelectionSort(arr)
         correct = isSorted(sorted)
         #print(correct, sorted)
-        if (i+1)%100000 == 0:
+        if (i+1)%100 == 0:
             print(i+1)
         if not(correct):
             break
