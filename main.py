@@ -6,7 +6,7 @@ from bubbleSort import BubbleSort
 def main():
     for i in range(1000):
         arr = RandomArray(5, (0,100))
-        sorted = SelectionSort(arr)
+        sorted = BubbleSort(arr)
         correct = isSorted(sorted)
         #print(correct, sorted)
         if (i+1)%100 == 0:
